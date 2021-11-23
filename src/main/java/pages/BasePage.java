@@ -8,9 +8,11 @@ public class BasePage {
     static WebDriver driver = null;
 
     public void initDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        if(driver==null){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+        }
     }
 
     public void tearDown(){
@@ -19,7 +21,7 @@ public class BasePage {
         }
     }
 
-    public void openUrl(){
+    public void launchApplication(){
         driver.get("https://www.saucedemo.com/");
     }
 

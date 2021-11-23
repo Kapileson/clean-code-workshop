@@ -1,11 +1,13 @@
 package tests;
 
+import org.junit.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class LoginTest {
+public class LoginTest extends BaseTest{
 
-    public static void loginSwagLabs(){
+    @Test
+    public void testLogin(){
         LoginPage loginPg = new LoginPage();
         loginPg.enterUsername("standard_user");
         loginPg.enterPassword("secret_sauce");

@@ -1,22 +1,17 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 import utilities.WebElementActions;
 
 public class HomePage extends BasePage{
 
-    @FindBy(className = "title")
-    private WebElement title;
+    By title = By.className("title");
 
-    public HomePage(){
-        PageFactory.initElements(driver, this);
-    }
+    public HomePage(){}
 
 
     public String getTitleText(){
-        return WebElementActions.findElementAndGetText(title);
+        return WebElementActions.findElementAndGetText(driver, title);
     }
 
 }

@@ -1,34 +1,26 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.By;
 import utilities.WebElementActions;
 
 public class LoginPage extends BasePage{
-    @CacheLookup
-    @FindBy(id="user-name")
-    private WebElement username;
 
-    @FindBy(id="password")
-    private WebElement password;
+    By username = By.id("user-name");
+    By password = By.id("password");
+    By loginButton = By.id("login-button");
 
-    @FindBy(id="login-button")
-    private WebElement loginButton;
-
-    public LoginPage(){
-        PageFactory.initElements(driver, this);
-    }
+    public LoginPage(){}
 
     public void enterUsername(String username){
-        WebElementActions.findElementAndEnter(this.username, username);
+        WebElementActions.findElementAndEnter(driver, this.username, username);
     }
 
     public void enterPassword(String password){
-        WebElementActions.findElementAndEnter(this.password, password);
+        WebElementActions.findElementAndEnter(driver, this.password, password);
     }
 
     public HomePage clickLoginButton(){
-        WebElementActions.findElementAndClick(loginButton);
+        WebElementActions.findElementAndClick(driver, loginButton);
         return new HomePage();
     }
 }
