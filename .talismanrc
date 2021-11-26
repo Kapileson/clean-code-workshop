@@ -1,3 +1,3 @@
 fileignoreconfig:
-- filename: src/main/java/pages/LoginPage.java
-  checksum: efb4051a8bdb91a656c5155f3ddb3bd3f129c8b2ebb2457d7437af7880a51b3b
+- filename: src/main/java/com/saucedemo/pages/LoginPage.java
+  checksum: 50f863805566c94c8c0c188fdb26d85497fd6576d68827c35a05d7eda9b9ba14
