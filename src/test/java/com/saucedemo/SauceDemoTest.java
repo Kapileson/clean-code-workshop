@@ -13,12 +13,12 @@ public class SauceDemoTest extends BaseTest {
 
     @Test
     @Order(1)
-    public void testLogin(){
+    public void testLogin() {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage =
                 loginPage.enterUsername("performance_glitch_user")
-                .enterPassword("secret_sauce")
-                .login();
+                        .enterPassword("secret_sauce")
+                        .login();
         productPage.checkTitle();
     }
 
